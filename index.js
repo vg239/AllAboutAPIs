@@ -5,7 +5,7 @@ const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore} = require('firebase-admin/firestore');
 const jwt = require("jsonwebtoken")
 
-const serviceAccount = require("./studentsms-9b172-firebase-adminsdk-snbfd-f53c5d6e44.json")
+const serviceAccount = require("./path/to/jsonfile.json")
 
 initializeApp({
     credential: cert(serviceAccount)
