@@ -107,20 +107,28 @@ app.get("/students", async(req,res)=>{
 
 app.put("/students/:id",async(req,res)=>{
     const rollno = req.params.id;
-    let {name,age,grade,attendance} = req.body;
-    const docSnap = await studentsCollection.doc(rollno).get()
-    if(!docSnap.exists){
-        res.status(404).send("not found ")
+let {name, age, grade, attendance} = req.body;
+
+try {
+    const docSnap = await studentsCollection.doc(rollno).get();
+    if (!docSnap.exists) {
+        return res.status(404).send("not found");
     }
+
     await studentsCollection.doc(rollno).update({
-        name : name || docSnap.data().name,
-        age : age || docSnap.data().age,
-        grade : grade || docSnap.data().grade,
-        attendance : attendance || docSnap.data().attendance
-    })
-    const newdocSnap = await studentsCollection.doc(rollno).get()
-    const {password, ...responseData} = newdocSnap.data()
-    res.send(responseData).status()
+        name: name || docSnap.data().name,
+        age: age || docSnap.data().age,
+        grade: grade || docSnap.data().grade,
+        attendance: attendance || docSnap.data().attendance
+    });
+
+    const newdocSnap = await studentsCollection.doc(rollno).get();
+    const {password, ...responseData} = newdocSnap.data();
+    res.status(200).send(responseData);
+} catch (error) {
+    console.error("Error updating student record:", error);
+    res.status(500).send("Internal Server Error");
+}
 })
 
 
