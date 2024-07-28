@@ -1,0 +1,137 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "allAboutAPIs",
+    "collectionId": "7cb05411-57be-4a43-abcf-292647e377f8",
+    "dateExported": "2024-07-28T19:15:18.953Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c0c22936-4d17-4bcd-abd5-809cb3b2fbcc",
+            "colId": "7cb05411-57be-4a43-abcf-292647e377f8",
+            "containerId": "",
+            "name": "Get list of all students",
+            "url": "http://localhost:3000/students",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-28T18:30:56.864Z",
+            "modified": "2024-07-28T19:10:44.682Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "rollno",
+                    "value": "231abc999"
+                },
+                {
+                    "name": "password",
+                    "value": "helloworld"
+                }
+            ]
+        },
+        {
+            "_id": "43535791-42ae-4e95-b977-03b2099b794f",
+            "colId": "7cb05411-57be-4a43-abcf-292647e377f8",
+            "containerId": "",
+            "name": "Add a student ",
+            "url": "http://localhost:3000/students",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-28T18:31:23.104Z",
+            "modified": "2024-07-28T19:09:01.010Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"rollno\" : \"231abc999\",\n  \"name\" : \"vatsal\",\n  \"age\" : 18,\n  \"attendance\" : 80,\n  \"grade\" : \"S\",\n  \"password\" : \"helloworld\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "480d7559-5943-4406-850f-2664038b17d5",
+            "colId": "7cb05411-57be-4a43-abcf-292647e377f8",
+            "containerId": "",
+            "name": "Update a student",
+            "url": "http://localhost:3000/students/231abc999",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-07-28T19:11:58.156Z",
+            "modified": "2024-07-28T19:14:28.971Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "rollno",
+                    "value": "231abc999"
+                },
+                {
+                    "name": "password",
+                    "value": "helloworld"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"pixel\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "08ec21d6-ca30-4282-a0e4-3cbd6d410965",
+            "colId": "7cb05411-57be-4a43-abcf-292647e377f8",
+            "containerId": "",
+            "name": "Delete a student",
+            "url": "http://localhost:3000/students/231abc999",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-07-28T19:14:42.948Z",
+            "modified": "2024-07-28T19:15:07.070Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "rollno",
+                    "value": "231abc999"
+                },
+                {
+                    "name": "password",
+                    "value": "helloworld"
+                }
+            ]
+        }
+    ],
+    "ref": "yUAbVH0IjH8vQF1Y7tcAFIvGh8g9ZOBm5kdk7q8tR9QAmS5aCzJC3CPpQZyT1OaN38nHU5lcfIvqCMPOWn__Zg"
+}
